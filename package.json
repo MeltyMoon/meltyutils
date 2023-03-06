@@ -1,10 +1,14 @@
 {
 	"name": "meltyutils",
-	"version": "1.0.1",
+	"version": "1.0.4",
 	"description": "Various Utilities",
 	"main": "dist/meltyutils.js",
 	"module": "dist/meltyutils.esm.js",
 	"author": "MeltyMoon",
+	"repository": {
+		"type": "github",
+		"url": "https://github.com/MeltyMoon/meltyutils"
+	},
 	"license": "MIT",
 	"private": false,
 	"devDependencies": {
@@ -15,10 +19,13 @@
 		"@rollup/plugin-commonjs": "^24.0.1",
 		"@rollup/plugin-node-resolve": "^15.0.1",
 		"eslint": "^8.35.0",
+		"node-sri": "^1.1.1",
 		"npm-run-all": "^4.1.5",
 		"rollup": "^3.18.0"
 	},
 	"scripts": {
+		"build": "npm run build-readme && npm run js-compile",
+		"build-readme": "node build/make-readme.js",
 		"js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
 		"js-compile-standalone": "rollup --environment ESM:false --config build/rollup.config.js --sourcemap",
 		"js-compile-standalone-esm": "rollup --environment ESM:true --config build/rollup.config.js --sourcemap"

@@ -373,5 +373,15 @@ var StringUtils = /*#__PURE__*/function () {
   return StringUtils;
 }();
 
-export { ArrayUtils as array, BooleanUtils as boolean, DateUtils as date, NumberUtils as number, ObjectUtils as object, RegExpUtils as regexp, StringUtils as string };
+var MeltyUtils = {
+  array: ArrayUtils,
+  "boolean": BooleanUtils,
+  date: DateUtils,
+  number: NumberUtils,
+  object: ObjectUtils,
+  regexp: RegExpUtils,
+  string: StringUtils
+};
+
+export { MeltyUtils as default };
 //# sourceMappingURL=meltyutils.esm.js.map

@@ -6,12 +6,14 @@ import { default as object } from "./utils/object";
 import { default as regexp } from "./utils/regexp";
 import { default as string } from "./utils/string";
 
-export default {
+const MeltyUtils = {
 	array,
 	boolean,
 	date,
 	number,
 	object,
 	regexp,
-	string,
-};
+	string
+}
+
+export default MeltyUtils;

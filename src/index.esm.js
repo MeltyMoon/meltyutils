@@ -1,7 +1,19 @@
-export { default as array } from "./utils/array";
-export { default as boolean } from "./utils/boolean";
-export { default as date } from "./utils/date";
-export { default as number } from "./utils/number";
-export { default as object } from "./utils/object";
-export { default as regexp } from "./utils/regexp";
-export { default as string } from "./utils/string";
+import { default as array } from "./utils/array";
+import { default as boolean } from "./utils/boolean";
+import { default as date } from "./utils/date";
+import { default as number } from "./utils/number";
+import { default as object } from "./utils/object";
+import { default as regexp } from "./utils/regexp";
+import { default as string } from "./utils/string";
+
+const MeltyUtils = {
+	array,
+	boolean,
+	date,
+	number,
+	object,
+	regexp,
+	string
+}
+
+export default MeltyUtils;

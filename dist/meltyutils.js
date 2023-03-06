@@ -379,7 +379,7 @@
     return StringUtils;
   }();
 
-  const index_umd = {
+  var MeltyUtils = {
     array: ArrayUtils,
     "boolean": BooleanUtils,
     date: DateUtils,
@@ -389,7 +389,7 @@
     string: StringUtils
   };
 
-  return index_umd;
+  return MeltyUtils;
 
 }));
 //# sourceMappingURL=meltyutils.js.map
