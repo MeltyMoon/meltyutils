@@ -85,6 +85,18 @@ var ArrayUtils = /*#__PURE__*/function () {
       }
     }
     return results;
+  }
+
+  /**
+   * Maps an array by the property of each item.
+   * @param {Array.<*>} array
+   * @param {string|number} property
+   * @returns {Array.<*>}
+   */;
+  ArrayUtils.mapProperty = function mapProperty(array, property) {
+    return array.map(function (item) {
+      return item[property];
+    });
   };
   return ArrayUtils;
 }();
@@ -369,6 +381,16 @@ var StringUtils = /*#__PURE__*/function () {
       }
     }
     return chopped;
+  }
+
+  /**
+   * Removes the elpisis (...) at the end of a string.
+   * @param {string} string 
+   * @returns {string}
+   */;
+  var _proto = StringUtils.prototype;
+  _proto.removeEndingElipsis = function removeEndingElipsis(string) {
+    return string.replace(/\.\.\.$/, "");
   };
   return StringUtils;
 }();

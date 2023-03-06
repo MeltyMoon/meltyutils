@@ -1,4 +1,4 @@
 npm run build
-git commit --all "$@"
+git commit --all -m "$@"
 git push
 npm publish

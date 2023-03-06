@@ -48,4 +48,13 @@ export default class StringUtils {
 
 		return chopped;
 	}
+
+	/**
+	 * Removes the elpisis (...) at the end of a string.
+	 * @param {string} string 
+	 * @returns {string}
+	 */
+	removeEndingElipsis(string) {
+		return string.replace(/\.\.\.$/, "");
+	}
 }

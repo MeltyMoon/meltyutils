@@ -51,4 +51,14 @@ export default class ArrayUtils {
 
 		return results;
 	}
+
+	/**
+	 * Maps an array by the property of each item.
+	 * @param {Array.<*>} array
+	 * @param {string|number} property
+	 * @returns {Array.<*>}
+	 */
+	static mapProperty(array, property) {
+		return array.map(item => item[property]);
+	}
 }
