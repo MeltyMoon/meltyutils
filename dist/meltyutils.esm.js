@@ -1,3 +1,17 @@
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
   if (typeof o === "string") return _arrayLikeToArray(o, minLen);
@@ -421,6 +435,59 @@ var StringUtils = /*#__PURE__*/function () {
    */;
   _proto.removeEndingElipsis = function removeEndingElipsis(string) {
     return string.replace(/\.\.\.$/, "");
+  }
+
+  /**
+   * Attempts to evenly space strings.
+   * (only really works with monospace fonts)
+   * 
+   * you must put `$SPACE$` where you want the space to be
+   * 
+   * ##### example:
+   * ```js
+   * [ "key$SPACE$value", "examplekey$SPACE$examplevalue" ]
+   * ```
+   * @param  {Array.<string>} strings
+   * @param  {Object} [options]
+   * @param  {"left"|"right"|"center"} [options.alignKey="left"] The direction to align the keys.
+   * 
+   * Default is `"left"`
+   * @param  {number} [options.minimumSpacing=1] The minimum amount of spaces between the key and the value.
+   * 
+   * Default is `1`.
+   */;
+  _proto.evenlySpace = function evenlySpace(strings, options) {
+    var _options;
+    options = _extends({
+      alignKey: "left",
+      minimumSpacing: 1
+    }, (_options = options) != null ? _options : {});
+    strings = strings.flat().map(function (str) {
+      var string = str.split("$SPACE$");
+      if (string.length > 2) {
+        throw new SyntaxError("this function currently only supports one spacing per string");
+      }
+      return string;
+    });
+    var longestKey = 0,
+      _strings = [];
+    for (var _iterator = _createForOfIteratorHelperLoose(strings), _step; !(_step = _iterator()).done;) {
+      var _step$value = _step.value,
+        key = _step$value[0];
+      longestKey = Math.max(longestKey, key.length);
+    }
+    for (var _iterator2 = _createForOfIteratorHelperLoose(strings), _step2; !(_step2 = _iterator2()).done;) {
+      var _string = _step2.value;
+      var string = "";
+      var difference = longestKey - _string[0].length;
+      string += "" + (options.alignKey === "left" ? "" : " ".repeat(Math.floor(difference / (options.alignKey === "center" ? 2 : 1))));
+      string += _string[0];
+      string += "" + (options.alignKey === "right" ? "" : " ".repeat(Math.ceil(difference / (options.alignKey === "center" ? 2 : 1))));
+      string += "" + " ".repeat(options.minimumSpacing);
+      string += _string[1];
+      _strings.push(string);
+    }
+    return _strings;
   };
   return StringUtils;
 }();
