@@ -9,7 +9,7 @@ Various utilities that can be used for any projects!
 Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.com)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.0.7/dist/meltyutils.js" integrity="sha384-xYW2gXH8FNPVMxppR/+Ll0MIne1X9Rp79PM/pJZf4VlK7byFofNcbmvq/tBkZU7O" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.1.1/dist/meltyutils.js" integrity="sha384-xYW2gXH8FNPVMxppR/+Ll0MIne1X9Rp79PM/pJZf4VlK7byFofNcbmvq/tBkZU7O" crossorigin="anonymous">
 ```
 
 ### npm
@@ -17,7 +17,7 @@ Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.c
 Install MeltyUtils into your Node.js projects with [the npm package](https://www.npmjs.com/package/meltyutils):
 
 ```sh
-npm install meltyutils@1.0.7
+npm install meltyutils@1.1.1
 ```
 
 ### yarn
@@ -25,5 +25,5 @@ npm install meltyutils@1.0.7
 Install MeltyUtils into your Node.js projects with [the yarn package](https://yarnpkg.com/package/meltyutils):
 
 ```sh
-yarn add meltyutils@1.0.7
+yarn add meltyutils@1.1.1
 ```
