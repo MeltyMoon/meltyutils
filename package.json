@@ -1,6 +1,6 @@
 {
 	"name": "meltyutils",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Various Utilities",
 	"main": "dist/meltyutils.js",
 	"module": "dist/meltyutils.esm.js",
@@ -25,7 +25,7 @@
 		"typescript": "^4.9.5"
 	},
 	"scripts": {
-		"publish": "npm run build && npm publish",
+		"publish": "npm run build && git commit --all && git push && npm publish",
 		"docs": "docgen -i './src/*.js' './src/**/*.js' -c ./docs/index.json -r ./ -o ./docs/docs.json",
 		"build": "npm run build-readme && npm run docs && npm run js-compile",
 		"build-readme": "node build/make-readme.js",
