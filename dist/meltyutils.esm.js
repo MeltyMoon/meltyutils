@@ -291,6 +291,30 @@ var NumberUtils = /*#__PURE__*/function () {
       value = Math.min(max, value);
     }
     return value;
+  }
+
+  /**
+   * Checks if a number is in the specified range.
+   * @param {number} value 
+   * @param {number} min 
+   * @param {number} max 
+   */;
+  NumberUtils.inRange = function inRange(value, min, max) {
+    return value >= min && value <= max;
+  }
+
+  /**
+   * Returns the number on the opposite side of the range.
+   * @param {number} value 
+   * @param {number} min 
+   * @param {number} max 
+   */;
+  var _proto = NumberUtils.prototype;
+  _proto.flipRange = function flipRange(value, min, max) {
+    if (!NumberUtils.inRange(value, min, max)) {
+      return null;
+    }
+    return min - value + max;
   };
   return NumberUtils;
 }();

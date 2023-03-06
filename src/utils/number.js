@@ -15,4 +15,28 @@ export default class NumberUtils {
 		
 		return value;
 	}
+
+	/**
+	 * Checks if a number is in the specified range.
+	 * @param {number} value 
+	 * @param {number} min 
+	 * @param {number} max 
+	 */
+	static inRange(value, min, max) {
+		return value >= min && value <= max;
+	}
+
+	/**
+	 * Returns the number on the opposite side of the range.
+	 * @param {number} value 
+	 * @param {number} min 
+	 * @param {number} max 
+	 */
+	flipRange(value, min, max) {
+		if (!NumberUtils.inRange(value, min, max)) {
+			return null;
+		}
+
+		return min - value + max;
+	}
 }

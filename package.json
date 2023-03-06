@@ -1,6 +1,6 @@
 {
 	"name": "meltyutils",
-	"version": "1.1.12",
+	"version": "1.2.0",
 	"description": "Various Utilities",
 	"main": "dist/meltyutils.js",
 	"module": "dist/meltyutils.esm.js",
