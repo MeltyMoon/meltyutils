@@ -280,9 +280,9 @@ var NumberUtils = /*#__PURE__*/function () {
   function NumberUtils() {}
   /**
    * Applies a range to a number.
-   * @param {number} value 
-   * @param {number} min 
-   * @param {number} max
+   * @param {number} value The value to apply the range to.
+   * @param {number} min The minimum/lowest number in the range.
+   * @param {number} max The maximum/highest number in the range.
    * @returns {number} 
    */
   NumberUtils.applyRange = function applyRange(value, min, max) {
@@ -295,9 +295,10 @@ var NumberUtils = /*#__PURE__*/function () {
 
   /**
    * Checks if a number is in the specified range.
-   * @param {number} value 
-   * @param {number} min 
-   * @param {number} max 
+   * @param {number} value The value to test. 
+   * @param {number} min The minimum/lowest number in the range.
+   * @param {number} max The maximum/highest number in the range.
+   * @returns {boolean}
    */;
   NumberUtils.inRange = function inRange(value, min, max) {
     return value >= min && value <= max;
@@ -305,9 +306,10 @@ var NumberUtils = /*#__PURE__*/function () {
 
   /**
    * Returns the number on the opposite side of the range.
-   * @param {number} value 
-   * @param {number} min 
-   * @param {number} max 
+   * @param {number} value The value.
+   * @param {number} min The minimum/lowest number in the range.
+   * @param {number} max The maximum/highest number in the range.
+   * @returns {number|null}
    */;
   var _proto = NumberUtils.prototype;
   _proto.flipRange = function flipRange(value, min, max) {
