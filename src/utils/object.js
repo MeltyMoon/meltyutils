@@ -24,7 +24,7 @@ export default class ObjectUtils {
 	 * Maps an object by a property.
 	 * @param {Object} object 
 	 * @param {string|number} property
-	 * @returns {*[]}
+	 * @returns {Array.<*>}
 	 */
 	static mapProperty(object, property) {
 		return Object
