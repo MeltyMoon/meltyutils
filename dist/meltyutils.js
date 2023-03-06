@@ -109,7 +109,8 @@
 
   var isBooleanString = /^(t(rue)?|f(alse)?|y(es)?|n(o)?|0|1)$/i,
     booleanStringIsTrue = /^(t(rue)?|y(es)?|1)$/i,
-    booleanStringIsFalse = /^(f(alse)?|n(o)?|0)$/i;
+    booleanStringIsFalse = /^(f(alse)?|n(o)?|0)$/i,
+    sentenceSplitString = /\.(?=(\s|$))/g;
   var RegExpUtils = function RegExpUtils() {};
 
   /**
@@ -413,6 +414,10 @@
         }
       }
       return chopped;
+    };
+    var _proto = StringUtils.prototype;
+    _proto.splitSentences = function splitSentences(string) {
+      return string.split(sentenceSplitString);
     }
 
     /**
@@ -420,7 +425,6 @@
      * @param {string} string 
      * @returns {string}
      */;
-    var _proto = StringUtils.prototype;
     _proto.removeEndingElipsis = function removeEndingElipsis(string) {
       return string.replace(/\.\.\.$/, "");
     };

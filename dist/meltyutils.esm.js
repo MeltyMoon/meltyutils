@@ -103,7 +103,8 @@ var ArrayUtils = /*#__PURE__*/function () {
 
 var isBooleanString = /^(t(rue)?|f(alse)?|y(es)?|n(o)?|0|1)$/i,
   booleanStringIsTrue = /^(t(rue)?|y(es)?|1)$/i,
-  booleanStringIsFalse = /^(f(alse)?|n(o)?|0)$/i;
+  booleanStringIsFalse = /^(f(alse)?|n(o)?|0)$/i,
+  sentenceSplitString = /\.(?=(\s|$))/g;
 var RegExpUtils = function RegExpUtils() {};
 
 /**
@@ -407,6 +408,10 @@ var StringUtils = /*#__PURE__*/function () {
       }
     }
     return chopped;
+  };
+  var _proto = StringUtils.prototype;
+  _proto.splitSentences = function splitSentences(string) {
+    return string.split(sentenceSplitString);
   }
 
   /**
@@ -414,7 +419,6 @@ var StringUtils = /*#__PURE__*/function () {
    * @param {string} string 
    * @returns {string}
    */;
-  var _proto = StringUtils.prototype;
   _proto.removeEndingElipsis = function removeEndingElipsis(string) {
     return string.replace(/\.\.\.$/, "");
   };

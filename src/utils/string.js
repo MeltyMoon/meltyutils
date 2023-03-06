@@ -1,3 +1,5 @@
+import { sentenceSplitString } from "./regexp";
+
 export default class StringUtils {
 	/**
 	 * Checks if a string is parsable as a JSON object.
@@ -47,6 +49,10 @@ export default class StringUtils {
 		}
 
 		return chopped;
+	}
+
+	splitSentences(string) {
+		return string.split(sentenceSplitString);
 	}
 
 	/**
