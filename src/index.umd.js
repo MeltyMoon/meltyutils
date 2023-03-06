@@ -5,6 +5,7 @@ import { default as number } from "./utils/number";
 import { default as object } from "./utils/object";
 import { default as regexp } from "./utils/regexp";
 import { default as string } from "./utils/string";
+import { default as document } from "./utils/document";
 
 const MeltyUtils = {
 	array,
@@ -13,7 +14,8 @@ const MeltyUtils = {
 	number,
 	object,
 	regexp,
-	string
+	string,
+	document
 }
 
 export default MeltyUtils;
