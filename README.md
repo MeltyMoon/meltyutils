@@ -1,6 +1,8 @@
 # meltyutils
 Various utilities that can be used for any projects!
 
+<a href="https://www.npmjs.com/package/discord.js"><img src="https://img.shields.io/npm/v/discord.js.svg?maxAge=3600" alt="npm version" /></a>
+<a href="https://www.npmjs.com/package/discord.js"><img src="https://img.shields.io/npm/dt/discord.js.svg?maxAge=3600" alt="npm downloads" /></a>
 
 ## Downloading
 
@@ -9,7 +11,7 @@ Various utilities that can be used for any projects!
 Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.com)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.2.4/dist/meltyutils.js" integrity="sha384-iFdSONF+SyzcHdhoD0IB4s8an6SYF3h3DiNG1LK+IEUniXvQYtgbbasK1JD/6Zyh" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.2.8/dist/meltyutils.js" integrity="sha384-gXTqSH2EiaD6Mp46K3jLPOw7kYctauZCJRI8+4+jRpMgEprXfhO/JHOTeOqATdch" crossorigin="anonymous">
 ```
 
 ### npm
@@ -17,7 +19,7 @@ Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.c
 Install MeltyUtils into your Node.js projects with [the npm package](https://www.npmjs.com/package/meltyutils):
 
 ```sh
-npm install meltyutils@1.2.4
+npm install meltyutils@1.2.8
 ```
 
 ### yarn
@@ -25,5 +27,5 @@ npm install meltyutils@1.2.4
 Install MeltyUtils into your Node.js projects with [the yarn package](https://yarnpkg.com/package/meltyutils):
 
 ```sh
-yarn add meltyutils@1.2.4
+yarn add meltyutils@1.2.8
 ```

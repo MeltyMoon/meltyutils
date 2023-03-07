@@ -498,41 +498,38 @@
     return StringUtils;
   }();
 
-  var DocumentUtils = undefined;
-
-  // dont create class if running in node.
-  if (typeof window !== "undefined") {
-    DocumentUtils = /*#__PURE__*/function () {
-      function DocumentUtils() {}
-      /**
-       * @param {Object} options The options for the element.
-       * @param {string} options.tag The element tag.
-       * @param {?string} options.id The element id.
-       * @param {?Element} options.parent The element parent.
-       * @param {?string} options.class The element class.
-       * @param {?boolean} options.draggable Whether the element is draggable.
-       * @returns {Element}
-       */
-      DocumentUtils.create = function create(options) {
-        var element = document.createElement(options.tag);
-        if (options.id) {
-          element.id = options.id;
-        }
-        if (options["class"]) {
-          element.className = options["class"];
-        }
-        if (options.draggable) {
-          element.draggable = options.draggable;
-        }
-        if (options.parent) {
-          options.parent.appendChild(element);
-        }
-        return element;
-      };
-      return DocumentUtils;
-    }();
-  }
-  const document$1 = DocumentUtils;
+  var DocumentUtils = /*#__PURE__*/function () {
+    function DocumentUtils() {}
+    /**
+     * @param {Object} options The options for the element.
+     * @param {string} options.tag The element tag.
+     * @param {?string} options.id The element id.
+     * @param {?Element} options.parent The element parent.
+     * @param {?string} options.class The element class.
+     * @param {?boolean} options.draggable Whether the element is draggable.
+     * @returns {Element}
+     */
+    DocumentUtils.create = function create(options) {
+      if (typeof window !== "undefined") {
+        throw new Error("This program is not being ran in a browser.");
+      }
+      var element = document.createElement(options.tag);
+      if (options.id) {
+        element.id = options.id;
+      }
+      if (options["class"]) {
+        element.className = options["class"];
+      }
+      if (options.draggable) {
+        element.draggable = options.draggable;
+      }
+      if (options.parent) {
+        options.parent.appendChild(element);
+      }
+      return element;
+    };
+    return DocumentUtils;
+  }();
 
   var MeltyUtils = {
     array: ArrayUtils,
@@ -542,7 +539,7 @@
     object: ObjectUtils,
     regexp: RegExpUtils,
     string: StringUtils,
-    document: document$1
+    document: DocumentUtils
   };
 
   return MeltyUtils;
