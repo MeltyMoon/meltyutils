@@ -1,11 +1,11 @@
-import ArrayUtils from "./utils/array";
-import BooleanUtils from "./utils/boolean";
-import DateUtils from "./utils/date";
-import NumberUtils from "./utils/number";
-import ObjectUtils from "./utils/object";
-import RegExpUtils from "./utils/regexp";
-import StringUtils from "./utils/string";
-import DocumentUtils from "./utils/document";
+import { default as ArrayUtils } from "./utils/array";
+import { default as BooleanUtils } from "./utils/boolean";
+import { default as DateUtils } from "./utils/date";
+import { default as NumberUtils } from "./utils/number";
+import { default as ObjectUtils } from "./utils/object";
+import { default as RegExpUtils } from "./utils/regexp";
+import { default as StringUtils } from "./utils/string";
+import { default as DocumentUtils } from "./utils/document";
 
 /**
  * @class MeltyUtils
