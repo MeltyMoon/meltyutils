@@ -12,13 +12,45 @@ import { default as document } from "./utils/document";
  * @classdesc Various utilities.
  */
 const MeltyUtils = class MeltyUtils {
+	/**
+	 * @type {import("./utils/array")}
+	 * @memberof MeltyUtils
+	 */
 	static array = array;
+	/**
+	 * @type {import("./utils/boolean")}
+	 * @memberof MeltyUtils
+	 */
 	static boolean = boolean;
+	/**
+	 * @type {import("./utils/date")}
+	 * @memberof MeltyUtils
+	 */
 	static date = date;
+	/**
+	 * @type {import("./utils/number")}
+	 * @memberof MeltyUtils
+	 */
 	static number = number;
+	/**
+	 * @type {import("./utils/object")}
+	 * @memberof MeltyUtils
+	 */
 	static object = object;
+	/**
+	 * @type {import("./utils/regexp")}
+	 * @memberof MeltyUtils
+	 */
 	static regexp = regexp;
+	/**
+	 * @type {import("./utils/string")}
+	 * @memberof MeltyUtils
+	 */
 	static string = string;
+	/**
+	 * @type {import("./utils/=")}
+	 * @memberof MeltyUtils
+	 */
 	static document = document;
 }
 
