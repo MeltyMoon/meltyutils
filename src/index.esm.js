@@ -1,57 +1,57 @@
-import { default as array } from "./utils/array";
-import { default as boolean } from "./utils/boolean";
-import { default as date } from "./utils/date";
-import { default as number } from "./utils/number";
-import { default as object } from "./utils/object";
-import { default as regexp } from "./utils/regexp";
-import { default as string } from "./utils/string";
-import { default as document } from "./utils/document";
+import ArrayUtils from "./utils/array";
+import BooleanUtils from "./utils/boolean";
+import DateUtils from "./utils/date";
+import NumberUtils from "./utils/number";
+import ObjectUtils from "./utils/object";
+import RegExpUtils from "./utils/regexp";
+import StringUtils from "./utils/string";
+import DocumentUtils from "./utils/document";
 
 /**
  * @class MeltyUtils
  * @classdesc Various utilities.
  */
-class MeltyUtils {
+const MeltyUtils = class MeltyUtils {
 	/**
-	 * @type {import("./utils/array")}
+	 * @type {ArrayUtils}
 	 * @memberof MeltyUtils
 	 */
-	static array = array;
+	static array = ArrayUtils;
 	/**
-	 * @type {import("./utils/boolean")}
+	 * @type {BooleanUtils}
 	 * @memberof MeltyUtils
 	 */
-	static boolean = boolean;
+	static boolean = BooleanUtils;
 	/**
-	 * @type {import("./utils/date")}
+	 * @type {DateUtils}
 	 * @memberof MeltyUtils
 	 */
-	static date = date;
+	static date = DateUtils;
 	/**
-	 * @type {import("./utils/number")}
+	 * @type {NumberUtils}
 	 * @memberof MeltyUtils
 	 */
-	static number = number;
+	static number = NumberUtils;
 	/**
-	 * @type {import("./utils/object")}
+	 * @type {ObjectUtils}
 	 * @memberof MeltyUtils
 	 */
-	static object = object;
+	static object = ObjectUtils;
 	/**
-	 * @type {import("./utils/regexp")}
+	 * @type {RegExpUtils}
 	 * @memberof MeltyUtils
 	 */
-	static regexp = regexp;
+	static regexp = RegExpUtils;
 	/**
-	 * @type {import("./utils/string")}
+	 * @type {StringUtils}
 	 * @memberof MeltyUtils
 	 */
-	static string = string;
+	static string = StringUtils;
 	/**
-	 * @type {import("./utils/=")}
+	 * @type {DocumentUtils}
 	 * @memberof MeltyUtils
 	 */
-	static document = document;
+	static document = DocumentUtils;
 }
 
 export default MeltyUtils;
