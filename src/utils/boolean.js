@@ -3,7 +3,7 @@ import { isBooleanString, booleanStringIsTrue, booleanStringIsFalse } from "./re
  * @typedef {boolean|string|0|1} BooleanResolvable
  */
 
-export default class BooleanUtils {
+class BooleanUtils {
 	/**
 	 * Checks if the provided thing is parsable as boolean.
 	 *
@@ -99,3 +99,4 @@ export default class BooleanUtils {
 		}
 	}
 }
+export default BooleanUtils;

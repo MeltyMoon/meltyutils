@@ -1,4 +1,4 @@
-export default class ObjectUtils {
+class ObjectUtils {
 	/**
 	 * Adds a property while avoiding circular properties.
 	 * 
@@ -33,3 +33,5 @@ export default class ObjectUtils {
 				.map(o => ([o[0], o[1][property]])));
 	}
 }
+
+export default ObjectUtils;

@@ -1,4 +1,4 @@
-# meltyutils
+# MeltyUtils
 Various utilities that can be used for any projects!
 
 <a href="https://www.npmjs.com/package/meltyutils"><img src="https://img.shields.io/npm/v/meltyutils.svg?maxAge=3600" alt="npm version" /></a>

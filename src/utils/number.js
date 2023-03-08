@@ -1,4 +1,4 @@
-export default class NumberUtils {
+class NumberUtils {
 	/**
 	 * Applies a range to a number.
 	 * @param {number} value The value to apply the range to.
@@ -42,3 +42,5 @@ export default class NumberUtils {
 		return min - value + max;
 	}
 }
+
+export default NumberUtils;

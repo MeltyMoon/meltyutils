@@ -3,7 +3,7 @@ const timeMs = [1e3, 6e4, 36e5, 864e5, 2628e6, 31536e6];
  * @typedef {Date|number} DateResolvable
  */
 
-export default class DateUtils {
+class DateUtils {
 	/**
 	 * Gets the difference between two dates. (in milliseconds) 
 	 * @param {DateResolvable} date1 The first date. 
@@ -67,3 +67,5 @@ export default class DateUtils {
 		return (new Date(resolvable) !== "Invalid Date") && !isNaN(new Date(resolvable));
 	}
 }
+
+export default DateUtils;

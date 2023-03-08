@@ -117,6 +117,15 @@
       return array.map(function (item) {
         return item[property];
       });
+    }
+
+    /**
+     * 
+     * @param {Array.<*>} array 
+     * @returns {number}
+     */;
+    ArrayUtils.lastIndex = function lastIndex(array) {
+      return array.length - 1;
     };
     return ArrayUtils;
   }();

@@ -1,4 +1,4 @@
-export default class ArrayUtils {
+class ArrayUtils {
 	/**
 	 * Groups items in an array in groups of a specified size.
 	 * 
@@ -61,4 +61,15 @@ export default class ArrayUtils {
 	static mapProperty(array, property) {
 		return array.map(item => item[property]);
 	}
+
+	/**
+	 * 
+	 * @param {Array.<*>} array 
+	 * @returns {number}
+	 */
+	static lastIndex(array) {
+		return array.length - 1;
+	}
 }
+
+export default ArrayUtils;

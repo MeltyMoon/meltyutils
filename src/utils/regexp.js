@@ -10,6 +10,8 @@ export {
 	sentenceSplitString
 }
 
-export default class RegExpUtils {
+class RegExpUtils {
 	
 }
+
+export default RegExpUtils;
