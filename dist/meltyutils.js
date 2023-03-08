@@ -531,16 +531,8 @@
     return DocumentUtils;
   }();
 
-  var MeltyUtils = {
-    array: ArrayUtils,
-    "boolean": BooleanUtils,
-    date: DateUtils,
-    number: NumberUtils,
-    object: ObjectUtils,
-    regexp: RegExpUtils,
-    string: StringUtils,
-    document: DocumentUtils
-  };
+  var _class;
+  var MeltyUtils = (_class = function MeltyUtils() {}, _class.array = ArrayUtils, _class["boolean"] = BooleanUtils, _class.date = DateUtils, _class.number = NumberUtils, _class.object = ObjectUtils, _class.regexp = RegExpUtils, _class.string = StringUtils, _class.document = DocumentUtils, _class);
 
   return MeltyUtils;
 

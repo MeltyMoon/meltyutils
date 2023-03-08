@@ -29,3 +29,7 @@ Install MeltyUtils into your Node.js projects with [the yarn package](https://ya
 ```sh
 yarn add meltyutils@$VERSION
 ```
+
+___
+
+Have a function you use across projects? [Make a pull request](https://github.com/MeltyMoon/meltyutils/compare), or [Make a new issue](https://github.com/MeltyMoon/meltyutils/issues/new/choose) on our github!

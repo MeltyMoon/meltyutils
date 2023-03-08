@@ -11,7 +11,7 @@ Various utilities that can be used for any projects!
 Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.com)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.2.9/dist/meltyutils.js" integrity="sha384-gXTqSH2EiaD6Mp46K3jLPOw7kYctauZCJRI8+4+jRpMgEprXfhO/JHOTeOqATdch" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.3.1/dist/meltyutils.js" integrity="sha384-5ifHyVk9UnYRlsCg0H4WKQAe9Hb2tw/b7aUWkWY1TV3Z5SKDUBwtOr2YKdq0yg6i" crossorigin="anonymous">
 ```
 
 ### npm
@@ -19,7 +19,7 @@ Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.c
 Install MeltyUtils into your Node.js projects with [the npm package](https://www.npmjs.com/package/meltyutils):
 
 ```sh
-npm install meltyutils@1.2.9
+npm install meltyutils@1.3.1
 ```
 
 ### yarn
@@ -27,5 +27,9 @@ npm install meltyutils@1.2.9
 Install MeltyUtils into your Node.js projects with [the yarn package](https://yarnpkg.com/package/meltyutils):
 
 ```sh
-yarn add meltyutils@1.2.9
+yarn add meltyutils@1.3.1
 ```
+
+___
+
+Have a function you use across projects? [Make a pull request](https://github.com/MeltyMoon/meltyutils/compare), or [Make a new issue](https://github.com/MeltyMoon/meltyutils/issues/new/choose) on our github!

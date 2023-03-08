@@ -7,15 +7,15 @@ import { default as regexp } from "./utils/regexp";
 import { default as string } from "./utils/string";
 import { default as document } from "./utils/document";
 
-const MeltyUtils = {
-	array,
-	boolean,
-	date,
-	number,
-	object,
-	regexp,
-	string,
-	document
+const MeltyUtils = class MeltyUtils {
+	static array = array;
+	static boolean = boolean;
+	static date = date;
+	static number = number;
+	static object = object;
+	static regexp = regexp;
+	static string = string;
+	static document = document;
 }
 
 export default MeltyUtils;

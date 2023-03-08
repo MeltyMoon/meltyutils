@@ -525,16 +525,15 @@ var DocumentUtils = /*#__PURE__*/function () {
   return DocumentUtils;
 }();
 
-const index_esm = MeltyUtils = {
-  array: ArrayUtils,
-  "boolean": BooleanUtils,
-  date: DateUtils,
-  number: NumberUtils,
-  object: ObjectUtils,
-  regexp: RegExpUtils,
-  string: StringUtils,
-  document: DocumentUtils
-};
+var MeltyUtils = function MeltyUtils() {};
+MeltyUtils.array = ArrayUtils;
+MeltyUtils["boolean"] = BooleanUtils;
+MeltyUtils.date = DateUtils;
+MeltyUtils.number = NumberUtils;
+MeltyUtils.object = ObjectUtils;
+MeltyUtils.regexp = RegExpUtils;
+MeltyUtils.string = StringUtils;
+MeltyUtils.document = DocumentUtils;
 
-export { index_esm as default };
+export { MeltyUtils as default };
 //# sourceMappingURL=meltyutils.esm.js.map

@@ -7,14 +7,13 @@ import { default as regexp } from "./utils/regexp";
 import { default as string } from "./utils/string";
 import { default as document } from "./utils/document";
 
-
-export default MeltyUtils = {
-	array,
-	boolean,
-	date,
-	number,
-	object,
-	regexp,
-	string,
-	document
-};
+export default class MeltyUtils {
+	static array = array;
+	static boolean = boolean;
+	static date = date;
+	static number = number;
+	static object = object;
+	static regexp = regexp;
+	static string = string;
+	static document = document;
+}
