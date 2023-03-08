@@ -3,6 +3,10 @@ const timeMs = [1e3, 6e4, 36e5, 864e5, 2628e6, 31536e6];
  * @typedef {Date|number} DateResolvable
  */
 
+/**
+ * @class DateUtils
+ * @classdesc Various date utilities.
+ */
 class DateUtils {
 	/**
 	 * Gets the difference between two dates. (in milliseconds) 
@@ -11,6 +15,7 @@ class DateUtils {
 	 * 
 	 * Defaults to the current date if not provided.
 	 * @returns {number}
+	 * @memberof DateUtils
 	 */
 	static difference(date1, date2 = null) {
 		if (date2 === null) {
@@ -33,6 +38,7 @@ class DateUtils {
 	 * Gets the date from the provided relative string.
 	 * @param {string} string 
 	 * @returns {number}
+	 * @memberof DateUtils
 	 */
 	static parseRelativeString(string) {
 		const yearMatches = /[0-9]+(y|ear(s)?)/gi.exec(string),
@@ -62,6 +68,7 @@ class DateUtils {
 	 * Checks if the resolvable is a date.
 	 * @param {DateResolvable} resolvable
 	 * @returns {boolean} 
+	 * @memberof DateUtils
 	 */
 	static isDate(resolvable) {
 		return (new Date(resolvable) !== "Invalid Date") && !isNaN(new Date(resolvable));

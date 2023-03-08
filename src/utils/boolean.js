@@ -3,13 +3,18 @@ import { isBooleanString, booleanStringIsTrue, booleanStringIsFalse } from "./re
  * @typedef {boolean|string|0|1} BooleanResolvable
  */
 
-class BooleanUtils {
+/**
+ * @class BooleanUtils
+ * @classdesc Various boolean utilities.
+ */
+export default class BooleanUtils {
 	/**
 	 * Checks if the provided thing is parsable as boolean.
 	 *
 	 * @static
 	 * @param {BooleanResolvable} resolvable 
 	 * @return {boolean}
+	 * @memberof BooleanUtils
 	 */
 	static is(resolvable) {
 		switch (typeof resolvable) {
@@ -37,6 +42,7 @@ class BooleanUtils {
 	 *
 	 * @param {BooleanResolvable} resolvable 
 	 * @return {boolean|null}
+	 * @memberof BooleanUtils
 	 */
 	static parse(resolvable) {
 		switch (resolvable) {
@@ -65,6 +71,7 @@ class BooleanUtils {
 	 * @static
 	 * @param {BooleanResolvable} resolvable 
 	 * @return {boolean}
+	 * @memberof BooleanUtils
 	 */
 	static isTrue(resolvable) {
 		switch (typeof resolvable) {
@@ -85,6 +92,7 @@ class BooleanUtils {
 	 * @static
 	 * @param {BooleanResolvable} resolvable 
 	 * @return {boolean}
+	 * @memberof BooleanUtils
 	 */
 	static isFalse(resolvable) {
 		switch (typeof resolvable) {
@@ -99,4 +107,3 @@ class BooleanUtils {
 		}
 	}
 }
-export default BooleanUtils;

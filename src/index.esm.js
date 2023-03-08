@@ -7,6 +7,10 @@ import { default as regexp } from "./utils/regexp";
 import { default as string } from "./utils/string";
 import { default as document } from "./utils/document";
 
+/**
+ * @class MeltyUtils
+ * @classdesc Various utilities.
+ */
 class MeltyUtils {
 	static array = array;
 	static boolean = boolean;

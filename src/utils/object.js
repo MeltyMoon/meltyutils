@@ -1,3 +1,8 @@
+
+/**
+ * @class ObjectUtils
+ * @classdesc Various object utilities.
+ */
 class ObjectUtils {
 	/**
 	 * Adds a property while avoiding circular properties.
@@ -6,6 +11,7 @@ class ObjectUtils {
 	 * @param {string|number} key 
 	 * @param {*} property 
 	 * @returns {void}
+	 * @memberof ObjectUtils
 	 */
 	static addPropertyNonCircular(object, key, property) {
 		Object.defineProperty(object, key, {
@@ -25,6 +31,7 @@ class ObjectUtils {
 	 * @param {Object} object 
 	 * @param {string|number} property
 	 * @returns {Array.<*>}
+	 * @memberof ObjectUtils
 	 */
 	static mapProperty(object, property) {
 		return Object

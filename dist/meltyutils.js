@@ -50,6 +50,10 @@
     throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
 
+  /**
+   * @class ArrayUtils
+   * @classdesc Various array utilities.
+   */
   var ArrayUtils = /*#__PURE__*/function () {
     function ArrayUtils() {}
     /**
@@ -59,6 +63,7 @@
      * @param {Array.<*>} array 
      * @param {number} groupSize The size of the groups. 
      * @returns {Array.<Array.<*>>}
+     * @memberof ArrayUtils
      */
     ArrayUtils.group = function group(array, groupSize) {
       if (!groupSize) {
@@ -81,6 +86,7 @@
      * If an item falls under 2 groups, it will go into the group that comes first.
      * @param {Array.<*>} array 
      * @param {Array.<ItemCallback>} groups 
+     * @memberof ArrayUtils
      */;
     ArrayUtils.groupBy = function groupBy(array, groups) {
       var results = [];
@@ -112,6 +118,7 @@
      * @param {Array.<*>} array
      * @param {string|number} property
      * @returns {Array.<*>}
+     * @memberof ArrayUtils
      */;
     ArrayUtils.mapProperty = function mapProperty(array, property) {
       return array.map(function (item) {
@@ -120,9 +127,10 @@
     }
 
     /**
-     * 
+     * Gets the last index of an array.
      * @param {Array.<*>} array 
      * @returns {number}
+     * @memberof ArrayUtils
      */;
     ArrayUtils.lastIndex = function lastIndex(array) {
       return array.length - 1;
@@ -134,10 +142,20 @@
     booleanStringIsTrue = /^(t(rue)?|y(es)?|1)$/i,
     booleanStringIsFalse = /^(f(alse)?|n(o)?|0)$/i,
     sentenceSplitString = /\.(?=(\s|$))/g;
+
+  /**
+   * @class RegExpUtils
+   * @classdesc Various regular expression utilities.
+   */
   var RegExpUtils = function RegExpUtils() {};
 
   /**
    * @typedef {boolean|string|0|1} BooleanResolvable
+   */
+
+  /**
+   * @class BooleanUtils
+   * @classdesc Various boolean utilities.
    */
   var BooleanUtils = /*#__PURE__*/function () {
     function BooleanUtils() {}
@@ -147,6 +165,7 @@
      * @static
      * @param {BooleanResolvable} resolvable 
      * @return {boolean}
+     * @memberof BooleanUtils
      */
     BooleanUtils.is = function is(resolvable) {
       switch (typeof resolvable) {
@@ -170,6 +189,7 @@
      *
      * @param {BooleanResolvable} resolvable 
      * @return {boolean|null}
+     * @memberof BooleanUtils
      */;
     BooleanUtils.parse = function parse(resolvable) {
       switch (resolvable) {
@@ -197,6 +217,7 @@
      * @static
      * @param {BooleanResolvable} resolvable 
      * @return {boolean}
+     * @memberof BooleanUtils
      */;
     BooleanUtils.isTrue = function isTrue(resolvable) {
       switch (typeof resolvable) {
@@ -217,6 +238,7 @@
      * @static
      * @param {BooleanResolvable} resolvable 
      * @return {boolean}
+     * @memberof BooleanUtils
      */;
     BooleanUtils.isFalse = function isFalse(resolvable) {
       switch (typeof resolvable) {
@@ -237,6 +259,11 @@
   /**
    * @typedef {Date|number} DateResolvable
    */
+
+  /**
+   * @class DateUtils
+   * @classdesc Various date utilities.
+   */
   var DateUtils = /*#__PURE__*/function () {
     function DateUtils() {}
     /**
@@ -246,6 +273,7 @@
      * 
      * Defaults to the current date if not provided.
      * @returns {number}
+     * @memberof DateUtils
      */
     DateUtils.difference = function difference(date1, date2) {
       if (date2 === void 0) {
@@ -268,6 +296,7 @@
      * Gets the date from the provided relative string.
      * @param {string} string 
      * @returns {number}
+     * @memberof DateUtils
      */;
     DateUtils.parseRelativeString = function parseRelativeString(string) {
       var yearMatches = /[0-9]+(y|ear(s)?)/gi.exec(string),
@@ -299,6 +328,7 @@
      * Checks if the resolvable is a date.
      * @param {DateResolvable} resolvable
      * @returns {boolean} 
+     * @memberof DateUtils
      */;
     DateUtils.isDate = function isDate(resolvable) {
       return new Date(resolvable) !== "Invalid Date" && !isNaN(new Date(resolvable));
@@ -306,6 +336,10 @@
     return DateUtils;
   }();
 
+  /**
+   * @class NumberUtils
+   * @classdesc Various number/math utilities.
+   */
   var NumberUtils = /*#__PURE__*/function () {
     function NumberUtils() {}
     /**
@@ -314,6 +348,7 @@
      * @param {number} min The minimum/lowest number in the range.
      * @param {number} max The maximum/highest number in the range.
      * @returns {number} 
+     * @memberof NumberUtils 
      */
     NumberUtils.applyRange = function applyRange(value, min, max) {
       value = Math.max(min, value);
@@ -329,6 +364,7 @@
      * @param {number} min The minimum/lowest number in the range.
      * @param {number} max The maximum/highest number in the range.
      * @returns {boolean}
+     * @memberof NumberUtils 
      */;
     NumberUtils.inRange = function inRange(value, min, max) {
       return value >= min && value <= max;
@@ -340,9 +376,9 @@
      * @param {number} min The minimum/lowest number in the range.
      * @param {number} max The maximum/highest number in the range.
      * @returns {number|null}
+     * @memberof NumberUtils 
      */;
-    var _proto = NumberUtils.prototype;
-    _proto.flipRange = function flipRange(value, min, max) {
+    NumberUtils.flipRange = function flipRange(value, min, max) {
       if (!NumberUtils.inRange(value, min, max)) {
         return null;
       }
@@ -351,6 +387,10 @@
     return NumberUtils;
   }();
 
+  /**
+   * @class ObjectUtils
+   * @classdesc Various object utilities.
+   */
   var ObjectUtils = /*#__PURE__*/function () {
     function ObjectUtils() {}
     /**
@@ -360,6 +400,7 @@
      * @param {string|number} key 
      * @param {*} property 
      * @returns {void}
+     * @memberof ObjectUtils
      */
     ObjectUtils.addPropertyNonCircular = function addPropertyNonCircular(object, key, property) {
       Object.defineProperty(object, key, {
@@ -378,6 +419,7 @@
      * @param {Object} object 
      * @param {string|number} property
      * @returns {Array.<*>}
+     * @memberof ObjectUtils
      */;
     ObjectUtils.mapProperty = function mapProperty(object, property) {
       return Object.fromEntries(Object.entries(object).map(function (o) {
@@ -387,6 +429,10 @@
     return ObjectUtils;
   }();
 
+  /**
+   * @class StringUtils
+   * @classdesc Various string utilities.
+   */
   var StringUtils = /*#__PURE__*/function () {
     function StringUtils() {}
     /**
@@ -394,6 +440,7 @@
      * 
      * @param {string} str
      * @returns {boolean}
+     * @memberof StringUtils
      */
     StringUtils.isJSON = function isJSON(str) {
       try {
@@ -409,6 +456,7 @@
      * @param {string} string
      * @param {number} size
      * @returns {string} 
+     * @memberof StringUtils
      */;
     StringUtils.limit = function limit(string, size, ellipsis) {
       if (ellipsis === void 0) {
@@ -425,6 +473,7 @@
      * @param {string} string
      * @param {number} size
      * @returns {string[]} 
+     * @memberof StringUtils
      */;
     StringUtils.chop = function chop(string, size) {
       var chopped = [];
@@ -437,9 +486,15 @@
         }
       }
       return chopped;
-    };
-    var _proto = StringUtils.prototype;
-    _proto.splitSentences = function splitSentences(string) {
+    }
+
+    /**
+     * Splits a string into an array containing its sentences.
+     * @param {string} string 
+     * @returns {Array.<string>}
+     * @memberof StringUtils
+     */;
+    StringUtils.splitSentences = function splitSentences(string) {
       return string.split(sentenceSplitString);
     }
 
@@ -447,8 +502,9 @@
      * Removes the elpisis (...) at the end of a string.
      * @param {string} string 
      * @returns {string}
+     * @memberof StringUtils
      */;
-    _proto.removeEndingElipsis = function removeEndingElipsis(string) {
+    StringUtils.removeEndingElipsis = function removeEndingElipsis(string) {
       return string.replace(/\.\.\.$/, "");
     }
 
@@ -470,8 +526,9 @@
      * @param  {number} [options.minimumSpacing=1] The minimum amount of spaces between the key and the value.
      * 
      * Default is `1`.
+     * @memberof StringUtils
      */;
-    _proto.evenlySpace = function evenlySpace(strings, options) {
+    StringUtils.evenlySpace = function evenlySpace(strings, options) {
       var _options;
       options = _extends({
         alignKey: "left",
@@ -507,6 +564,10 @@
     return StringUtils;
   }();
 
+  /**
+   * @class DocumentUtils
+   * @classdesc Various document utilities.
+   */
   var DocumentUtils = /*#__PURE__*/function () {
     function DocumentUtils() {}
     /**
@@ -517,6 +578,7 @@
      * @param {?string} options.class The element class.
      * @param {?boolean} options.draggable Whether the element is draggable.
      * @returns {Element}
+     * @memberof DocumentUtils
      */
     DocumentUtils.create = function create(options) {
       if (typeof window !== "undefined") {
@@ -541,6 +603,11 @@
   }();
 
   var _class;
+
+  /**
+   * @class MeltyUtils
+   * @classdesc Various utilities.
+   */
   var MeltyUtils = (_class = function MeltyUtils() {}, _class.array = ArrayUtils, _class["boolean"] = BooleanUtils, _class.date = DateUtils, _class.number = NumberUtils, _class.object = ObjectUtils, _class.regexp = RegExpUtils, _class.string = StringUtils, _class.document = DocumentUtils, _class);
 
   return MeltyUtils;

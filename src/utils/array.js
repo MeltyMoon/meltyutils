@@ -1,3 +1,7 @@
+/**
+ * @class ArrayUtils
+ * @classdesc Various array utilities.
+ */
 class ArrayUtils {
 	/**
 	 * Groups items in an array in groups of a specified size.
@@ -6,6 +10,7 @@ class ArrayUtils {
 	 * @param {Array.<*>} array 
 	 * @param {number} groupSize The size of the groups. 
 	 * @returns {Array.<Array.<*>>}
+	 * @memberof ArrayUtils
 	 */
 	static group(array, groupSize) {
 		if (!groupSize) {
@@ -29,6 +34,7 @@ class ArrayUtils {
 	 * If an item falls under 2 groups, it will go into the group that comes first.
 	 * @param {Array.<*>} array 
 	 * @param {Array.<ItemCallback>} groups 
+	 * @memberof ArrayUtils
 	 */
 	static groupBy(array, groups) {
 		let results = [];
@@ -57,15 +63,17 @@ class ArrayUtils {
 	 * @param {Array.<*>} array
 	 * @param {string|number} property
 	 * @returns {Array.<*>}
+	 * @memberof ArrayUtils
 	 */
 	static mapProperty(array, property) {
 		return array.map(item => item[property]);
 	}
 
 	/**
-	 * 
+	 * Gets the last index of an array.
 	 * @param {Array.<*>} array 
 	 * @returns {number}
+	 * @memberof ArrayUtils
 	 */
 	static lastIndex(array) {
 		return array.length - 1;

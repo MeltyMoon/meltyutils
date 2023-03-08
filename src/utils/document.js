@@ -1,3 +1,8 @@
+
+/**
+ * @class DocumentUtils
+ * @classdesc Various document utilities.
+ */
 class DocumentUtils {
 	/**
 	 * @param {Object} options The options for the element.
@@ -7,6 +12,7 @@ class DocumentUtils {
 	 * @param {?string} options.class The element class.
 	 * @param {?boolean} options.draggable Whether the element is draggable.
 	 * @returns {Element}
+	 * @memberof DocumentUtils
 	 */
 	static create(options) {
 		if (typeof window !== "undefined") {

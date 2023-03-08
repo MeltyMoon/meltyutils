@@ -10,6 +10,10 @@ export {
 	sentenceSplitString
 }
 
+/**
+ * @class RegExpUtils
+ * @classdesc Various regular expression utilities.
+ */
 class RegExpUtils {
 	
 }

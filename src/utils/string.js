@@ -1,11 +1,16 @@
 import { sentenceSplitString } from "./regexp";
 
+/**
+ * @class StringUtils
+ * @classdesc Various string utilities.
+ */
 class StringUtils {
 	/**
 	 * Checks if a string is parsable as a JSON object.
 	 * 
 	 * @param {string} str
 	 * @returns {boolean}
+	 * @memberof StringUtils
 	 */
 	static isJSON(str) {
 		try {
@@ -21,6 +26,7 @@ class StringUtils {
 	 * @param {string} string
 	 * @param {number} size
 	 * @returns {string} 
+	 * @memberof StringUtils
 	 */
 	static limit(string, size, ellipsis = false) {
 		if (ellipsis) {
@@ -35,6 +41,7 @@ class StringUtils {
 	 * @param {string} string
 	 * @param {number} size
 	 * @returns {string[]} 
+	 * @memberof StringUtils
 	 */
 	static chop(string, size) {
 		let chopped = [];
@@ -51,7 +58,13 @@ class StringUtils {
 		return chopped;
 	}
 
-	splitSentences(string) {
+	/**
+	 * Splits a string into an array containing its sentences.
+	 * @param {string} string 
+	 * @returns {Array.<string>}
+	 * @memberof StringUtils
+	 */
+	static splitSentences(string) {
 		return string.split(sentenceSplitString);
 	}
 
@@ -59,8 +72,9 @@ class StringUtils {
 	 * Removes the elpisis (...) at the end of a string.
 	 * @param {string} string 
 	 * @returns {string}
+	 * @memberof StringUtils
 	 */
-	removeEndingElipsis(string) {
+	static removeEndingElipsis(string) {
 		return string.replace(/\.\.\.$/, "");
 	}
 
@@ -82,8 +96,9 @@ class StringUtils {
 	 * @param  {number} [options.minimumSpacing=1] The minimum amount of spaces between the key and the value.
 	 * 
 	 * Default is `1`.
+	 * @memberof StringUtils
 	 */
-	evenlySpace(strings, options) {
+	static evenlySpace(strings, options) {
 		options = {
 			alignKey: "left",
 			minimumSpacing: 1,

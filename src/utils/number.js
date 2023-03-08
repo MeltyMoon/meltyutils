@@ -1,3 +1,8 @@
+
+/**
+ * @class NumberUtils
+ * @classdesc Various number/math utilities.
+ */
 class NumberUtils {
 	/**
 	 * Applies a range to a number.
@@ -5,6 +10,7 @@ class NumberUtils {
 	 * @param {number} min The minimum/lowest number in the range.
 	 * @param {number} max The maximum/highest number in the range.
 	 * @returns {number} 
+	 * @memberof NumberUtils 
 	 */
 	static applyRange(value, min, max) {
 		value = Math.max(min, value);
@@ -22,6 +28,7 @@ class NumberUtils {
 	 * @param {number} min The minimum/lowest number in the range.
 	 * @param {number} max The maximum/highest number in the range.
 	 * @returns {boolean}
+	 * @memberof NumberUtils 
 	 */
 	static inRange(value, min, max) {
 		return value >= min && value <= max;
@@ -33,8 +40,9 @@ class NumberUtils {
 	 * @param {number} min The minimum/lowest number in the range.
 	 * @param {number} max The maximum/highest number in the range.
 	 * @returns {number|null}
+	 * @memberof NumberUtils 
 	 */
-	flipRange(value, min, max) {
+	static flipRange(value, min, max) {
 		if (!NumberUtils.inRange(value, min, max)) {
 			return null;
 		}
