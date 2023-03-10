@@ -73,6 +73,23 @@ class DateUtils {
 	static isDate(resolvable) {
 		return (new Date(resolvable) !== "Invalid Date") && !isNaN(new Date(resolvable));
 	}
+
+	/**
+	 * Waits till the date to resolve (and run the provided callback if provided)
+	 * @param {DateResolvable} date 
+	 * @param {?function} callback
+	 * @param {...*} args
+	 * @returns {Promise.<*>}
+	 */
+	static waitTill(date, callback, ...args) {
+		return new Promise(resolve => {
+			setTimeout(() => {
+				if (callback) {
+					callback(...args);
+				}
+			}, DateUtils.difference(date) - 100);
+		});
+	}
 }
 
 export default DateUtils;

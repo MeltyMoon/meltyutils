@@ -332,6 +332,26 @@
      */;
     DateUtils.isDate = function isDate(resolvable) {
       return new Date(resolvable) !== "Invalid Date" && !isNaN(new Date(resolvable));
+    }
+
+    /**
+     * Waits till the date to resolve (and run the provided callback if provided)
+     * @param {DateResolvable} date 
+     * @param {?function} callback
+     * @param {...*} args
+     * @returns {Promise.<*>}
+     */;
+    DateUtils.waitTill = function waitTill(date, callback) {
+      for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+        args[_key - 2] = arguments[_key];
+      }
+      return new Promise(function (resolve) {
+        setTimeout(function () {
+          if (callback) {
+            callback.apply(void 0, args);
+          }
+        }, DateUtils.difference(date) - 100);
+      });
     };
     return DateUtils;
   }();
