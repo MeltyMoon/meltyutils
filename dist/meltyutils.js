@@ -134,6 +134,20 @@
      */;
     ArrayUtils.lastIndex = function lastIndex(array) {
       return array.length - 1;
+    }
+
+    /**
+     * Gets the number of instances of the specified value in the given array.
+     * @static
+     * @param {Array.<*>} array 
+     * @param {*} value 
+     * @return {number}
+     * @memberof ArrayUtils
+     */;
+    ArrayUtils.getIterations = function getIterations(array, value) {
+      return array.reduce(function (a, v) {
+        return a === value ? v + 1 : v;
+      }, 0);
     };
     return ArrayUtils;
   }();
@@ -356,6 +370,13 @@
     return DateUtils;
   }();
 
+  var words = {
+    bigNumbers: ["", "thousand", "million", "billion", "trillion", "quadrillion", "quintillion"],
+    single: ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", ""],
+    teens: ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"],
+    tens: [,, "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+  };
+
   /**
    * @class NumberUtils
    * @classdesc Various number/math utilities.
@@ -363,13 +384,56 @@
   var NumberUtils = /*#__PURE__*/function () {
     function NumberUtils() {}
     /**
+     * Stringifies numbers.
+     * 
+     * example:
+     * ```js
+     * stringify(1) === "one"
+     * ```
+     * @param {number} number
+     * @returns {string} 
+     */
+    NumberUtils.stringify = function stringify(number) {
+      if (number === 0) {
+        return "zero";
+      }
+      var groups = [];
+      while (number > 0) {
+        groups.push(number % 1000);
+        number = Math.floor(number / 1000);
+      }
+      var groupWords = groups.map(function (group, index) {
+        var string = "";
+        var hundreds = Math.floor(group / 100),
+          tensOnes = group % 100;
+        if (hundreds > 0) {
+          string += words.single[hundreds] + " hundred";
+        }
+        if (tensOnes > 0) {
+          if (!(tensOnes < 10 || tensOnes < 20)) {
+            var tens = Math.floor(tensOnes / 10),
+              ones = tensOnes % 10;
+            string += " " + words.tens[tens] + " " + (ones > 0 ? words.single[ones] : "");
+          } else {
+            string += " and " + (tensOnes < 10 ? words.single[tensOnes] : words.teens[tensOnes - 10]);
+          }
+        }
+        if (group > 0 && index < words.bigNumbers.length) {
+          string += " " + words.bigNumbers[index];
+        }
+        return string.trim();
+      });
+      return groupWords.reverse().join(" ").replace(/(\s)*$/g, "").replace(/^and/, "").replace(/^(\s)*/g, "");
+    }
+
+    /**
      * Applies a range to a number.
      * @param {number} value The value to apply the range to.
      * @param {number} min The minimum/lowest number in the range.
      * @param {number} max The maximum/highest number in the range.
      * @returns {number} 
      * @memberof NumberUtils 
-     */
+     */;
     NumberUtils.applyRange = function applyRange(value, min, max) {
       value = Math.max(min, value);
       if (max) {

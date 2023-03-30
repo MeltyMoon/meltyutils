@@ -78,6 +78,18 @@ class ArrayUtils {
 	static lastIndex(array) {
 		return array.length - 1;
 	}
+
+	/**
+	 * Gets the number of instances of the specified value in the given array.
+	 * @static
+	 * @param {Array.<*>} array 
+	 * @param {*} value 
+	 * @return {number}
+	 * @memberof ArrayUtils
+	 */
+	static getIterations(array, value) {
+		return array.reduce((a, v) => a === value ? v + 1 : v, 0);
+	}
 }
 
 export default ArrayUtils;
