@@ -371,6 +371,35 @@
   }();
 
   var words = {
+    // extensions: [
+    // 	{ ext: "un", value: 1, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "duo", value: 2, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "tre", value: 3, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "s", "X": "s" } },
+    // 	{ ext: "quattor", value: 4, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "quinqua", value: 5, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "se", value: 6, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "x", "X": "" } },
+    // 	{ ext: "septe", value: 7, suffixMarking: "", suffixes: { "N": "n", "M": "m", "S": "", "X": "" } },
+    // 	{ ext: "octo", value: 8, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "nove", value: 9, suffixMarking: "", suffixes: { "N": "n", "M": "m", "S": "", "X": "" } },
+    // 	{ ext: "deci", value: 10, suffixMarking: "N", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "viginti", value: 20, suffixMarking: "MS", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "triginti", value: 30, suffixMarking: "NS", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "quadraginta", value: 40, suffixMarking: "NS", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "quinquaginta", value: 50, suffixMarking: "NS", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "sexaginta", value: 60, suffixMarking: "N", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "septuaginta", value: 70, suffixMarking: "N", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "octoginta", value: 80, suffixMarking: "MX", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "nonaginta", value: 90, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "centi", value: 100, suffixMarking: "NX", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "ducenti", value: 200, suffixMarking: "N", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "trecenti", value: 300, suffixMarking: "NS", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "quadringenti", value: 400, suffixMarking: "NS", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "quingenti", value: 500, suffixMarking: "NS", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "sescenti", value: 600, suffixMarking: "N", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "septingenti", value: 700, suffixMarking: "N", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "octingenti", value: 800, suffixMarking: "MX", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // 	{ ext: "nonaginti", value: 900, suffixMarking: "", suffixes: { "N": "", "M": "", "S": "", "X": "" } },
+    // ],
     bigNumbers: ["", "thousand", "million", "billion", "trillion", "quadrillion", "quintillion"],
     single: ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", ""],
     teens: ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"],
@@ -440,6 +469,17 @@
         value = Math.min(max, value);
       }
       return value;
+    }
+
+    /**
+     * Generates a pseudo-random number in the specified range.
+     * @param {number} min The minimum/lowest number in the range.
+     * @param {number} max The maximum/highest number in the range.
+     * @return {number}
+     * @memberof NumberUtils
+     */;
+    NumberUtils.randomNumber = function randomNumber(min, max) {
+      return Math.floor(Math.random() * max) + min;
     }
 
     /**
