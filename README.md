@@ -11,7 +11,7 @@ Similarly to [lodash](https://lodash.com), MeltyUtils is a module with various u
 Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.com)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.6.8/dist/meltyutils.js" integrity="sha384-lz2++cqnpOgh7Ydv1Wm16VZaus7bIIcVeeOtsZ93wDempQlZvJgZ5MeFBvmH80kn" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.4.2/dist/meltyutils.js" integrity="sha384-lz2++cqnpOgh7Ydv1Wm16VZaus7bIIcVeeOtsZ93wDempQlZvJgZ5MeFBvmH80kn" crossorigin="anonymous">
 ```
 
 ### npm
