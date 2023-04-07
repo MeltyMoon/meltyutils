@@ -1,11 +1,11 @@
 
 import { writeFileSync, readFileSync } from "fs";
 import { resolve } from "path";
-import { version } from "../package.json" assert { type: "json" };
+import pkg from "../package.json" assert { type: "json" };
 import sri from "node-sri";
 
 let data = readFileSync(resolve(__dirname, "./readme-base.md")).toString("utf-8");
-data = data.replace(/\$VERSION/g, version);
+data = data.replace(/\$VERSION/g, pkg.version);
 sri.hash({
 	file: resolve(__dirname, "../dist/meltyutils.js"),
 	algo: "sha384"
