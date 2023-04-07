@@ -767,5 +767,5 @@ var MeltyUtils = {
   document: DocumentUtils
 };
 
-export { MeltyUtils as default };
+export { MeltyUtils };
 //# sourceMappingURL=meltyutils.esm.js.map
