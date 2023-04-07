@@ -720,13 +720,52 @@ var DocumentUtils = /*#__PURE__*/function () {
   return DocumentUtils;
 }();
 
-var _class;
-
 /**
  * @class MeltyUtils
  * @classdesc Various utilities.
  */
-var MeltyUtils = (_class = function MeltyUtils() {}, _class.array = ArrayUtils, _class["boolean"] = BooleanUtils, _class.date = DateUtils, _class.number = NumberUtils, _class.object = ObjectUtils, _class.regexp = RegExpUtils, _class.string = StringUtils, _class.document = DocumentUtils, _class);
+var MeltyUtils = {
+  /**
+   * @type {ArrayUtils}
+   * @memberof MeltyUtils
+   */
+  array: ArrayUtils,
+  /**
+   * @type {BooleanUtils}
+   * @memberof MeltyUtils
+   */
+  "boolean": BooleanUtils,
+  /**
+   * @type {DateUtils}
+   * @memberof MeltyUtils
+   */
+  date: DateUtils,
+  /**
+   * @type {NumberUtils}
+   * @memberof MeltyUtils
+   */
+  number: NumberUtils,
+  /**
+   * @type {ObjectUtils}
+   * @memberof MeltyUtils
+   */
+  object: ObjectUtils,
+  /**
+   * @type {RegExpUtils}
+   * @memberof MeltyUtils
+   */
+  regexp: RegExpUtils,
+  /**
+   * @type {StringUtils}
+   * @memberof MeltyUtils
+   */
+  string: StringUtils,
+  /**
+   * @type {DocumentUtils}
+   * @memberof MeltyUtils
+   */
+  document: DocumentUtils
+};
 
 export { MeltyUtils as default };
 //# sourceMappingURL=meltyutils.esm.js.map
