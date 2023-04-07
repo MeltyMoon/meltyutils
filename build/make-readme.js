@@ -1,7 +1,8 @@
-const { writeFileSync, readFileSync } = require("fs"),
-	{ resolve } = require("path"),
-	{ version } = require("../package.json"),
-	sri = require("node-sri");
+
+import { writeFileSync, readFileSync } from "fs";
+import { resolve } from "path";
+import { version } from "../package.json";
+import sri from "node-sri";
 
 let data = readFileSync(resolve(__dirname, "./readme-base.md")).toString("utf-8");
 data = data.replace(/\$VERSION/g, version);
