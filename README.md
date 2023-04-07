@@ -11,7 +11,7 @@ Similarly to [lodash](https://lodash.com), MeltyUtils is a module with various u
 Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.com)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.4.9/dist/meltyutils.js" integrity="sha384-VtISRSLah9TanGlOWgz21W2y+2cRmpHQfFmQx2TP1BSS6499A3s57rY2BuNabxLl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/meltyutils@1.5.0/dist/meltyutils.js" integrity="sha384-VtISRSLah9TanGlOWgz21W2y+2cRmpHQfFmQx2TP1BSS6499A3s57rY2BuNabxLl" crossorigin="anonymous">
 ```
 
 ### npm
@@ -19,7 +19,7 @@ Add MeltyUtils into your web applications with [jsDelivr](https://www.jsdelivr.c
 Install MeltyUtils into your Node.js projects with [the npm package](https://www.npmjs.com/package/meltyutils):
 
 ```sh
-npm install meltyutils@1.4.9
+npm install meltyutils@1.5.0
 ```
 
 ### yarn
@@ -27,7 +27,7 @@ npm install meltyutils@1.4.9
 Install MeltyUtils into your Node.js projects with [the yarn package](https://yarnpkg.com/package/meltyutils):
 
 ```sh
-yarn add meltyutils@1.4.9
+yarn add meltyutils@1.5.0
 ```
 
 ___
